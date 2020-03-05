@@ -1,0 +1,23 @@
+body{
+    font-size: 22px;
+    
+    background-color: #f4f4f4;
+    line-height: 1.5rem;
+}
+
+a {
+    margin-left: 15px;
+}
+
+input,select {
+    margin-bottom: 5px;
+}
+
+.box{
+    background-color: #989898;
+    color:black;
+    height: 230px;
+    width: 530px;
+    padding: 40px;
+    text-align: center;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="jumbotron">
+            <h1 class="display-4">Hello, world!</h1>
+            <p class="lead" id="jumbo-lead">This is a simple hero unit, a simple jumbotron-style component for calling
+                extra attention
+                to featured content or information.</p>
+            <hr class="my-4">
+            <p class="jumbo-p">It uses utility classes for typography and spacing to space content out within the larger
+                container.</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            </p>
+            <p id="jumbo-lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam ut maxime dignissimos
+                modi doloribus
+                facere, ex repellat assumenda sunt atque placeat, dolorum amet eligendi praesentium voluptatem.
+                Excepturi quisquam assumenda labore.</p>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <ul id=pg-ul>
+                        <li>
+                            <button type="button" class="btn btn-primary">Primary</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-secondary">Secondary</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-success">Success</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-danger">Danger</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <ul>
+                        <li>
+                            <button type="button" class="btn btn-warning">Warning</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-info">Info</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-light">Light</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-dark">Dark</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h1 id="fh1">
+                        Hellon FH1
+                    </h1>
+                    <h1 id="fh2">
+                        Hello FH2
+                    </h1>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-6">
+                    <ol id=pg-ol-1>
+                        <li>itm1</li>
+                        <li>itm2</li>
+                        <li>itm3</li>
+                        <li>itm4</li>
+                        <li>itm5</li>
+                        <li>itm6</li>
+                        <li>itm7</li>
+                        <li>itm8</li>
+                    </ol>
+                </div>
+                <div class="col-lg-6">
+                    <ol id=pg-ol-2>
+                        <li>itm1</li>
+                        <li>itm2</li>
+                        <li>itm3</li>
+                        <li>itm4</li>
+                        <li>itm5</li>
+                        <li>itm6</li>
+                        <li>itm7</li>
+                        <li>itm8</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4" id="btntype"><input type="button" class="btn btn-primary" value="button"></div>
+                <div class="col-md-4"> <input type="submit" class="btn btn-warning" val="submit"></div>
+                <div class="col-md-4"> <input type="text" class="form-control"></div>
+            </div>
+
+            <div class="row mt-5">
+                <a href="https://www.google.com/" class="coli" target="_blank">Google</a>
+                <a href="https://www.apple.com/in/?cid-oas-in-domains-apple.in" class="coli" target="_blank">Apple</a>
+                <a href="https://www.microsoft.com/en-in/" class="coli" target="_blank">Microsoft</a>
+            </div>
+        </div>
+        <br />
+        <br />
+    </section>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    </script>
+
+
+    <script>
+        // $('#jumbo-lead').hide();
+        //$('section').css('margin-top', '20px');
+        $('li .btn').css('padding', '15px');
+        // $(document).ready(function () {
+        //     $('#fh1').(function () {
+        //         $(this).text("Hello");
+        //     });
+        // })
+
+        $('#jumbo-lorem').css("font-wight", "bolder");
+        $(document).ready(function () {
+            $("#fh1").text("Hello FH1");
+        });
+
+        var c = $('ol#pg-ol-1 li:even').css('color', 'blue');
+        c.css('background-color', 'yellow');
+        c.css('list-style', 'none');
+        $('ol#pg-ol-1 li:odd').css('color', 'red');
+        $('ol#pg-ol-2 li:even').css('color', 'red');
+        $('ol#pg-ol-2 li:odd').css('color', 'blue');
+
+        $('#btntype').click(function () {
+            //$('#pg-ol-1').hide();
+            $(':submit').removeClass('btn-warning');
+
+            $(':submit').addClass('btn-danger');
+
+            $('*').hide();
+        });
+
+        // $('a').hover(function () {
+        //     $(this).css('color', 'green');
+        // })
+        $('a.coli').mouseenter(function () {
+            $(this).css('color', 'red');
+        })
+        $('a.coli').mouseleave(function () {
+            $(this).css('color', 'blue');
+        })
+    </script>
+</body>s
+
+</html>

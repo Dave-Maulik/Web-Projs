@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="jumbotron">
+            <h1 class="display-4" id="coords">Hello, world!</h1>
+            <p class="lead" id="jumbo-lead">This is a simple hero unit, a simple jumbotron-style component for calling
+                extra attention
+                to featured content or information.</p>
+            <hr class="my-4">
+            <p class="jumbo-p">It uses utility classes for typography and spacing to space content out within the larger
+                container.</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button" id='corrdsmode'>Learn more</a>
+            </p>
+            <p id="jumbo-lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam ut maxime dignissimos
+                modi doloribus
+                facere, ex repellat assumenda sunt atque placeat, dolorum amet eligendi praesentium voluptatem.
+                Excepturi quisquam assumenda labore.</p>
+        </div>
+
+
+        <div class="container-fluid">
+            <div class="row mt-4">
+                <h3>Mouse Events</h3>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-6">
+                    <ul class=pg-ul>
+                        <li>
+                            <button type="button" class="btn btn-primary btn1">Primary</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-secondary btn1">Secondary</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-success btn1">Success</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-danger btn1">Danger</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6 ">
+                    <ul class=pg-ul>
+                        <li>
+                            <button type="button" class="btn btn-warning btn1">Warning</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-info btn1">Info</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-light btn1">Light</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-dark btn1">Dark</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="margin-top:20px ;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <button id="toggle-para" type="button" class="btn btn-danger">Toggle Para</button>
+                </div>
+                <div class="col-lg-6">
+                    <p id='togp'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem velit ratione quod
+                        eligendi
+                        quidem ea facere rem harum odio est quas vitae suscipit repellendus, cumque omnis ipsum animi
+                        culpa placeat.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore consequatur recusandae fugiat
+                        in vitae rem
+                        quasi sapiente aliquam numquam vel est at facere, ab consectetur expedita error nobis tempore
+                        officiis?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br />
+    </section>
+
+    <section class="form-section" style="padding-bottom: 50px;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Form
+                    </h1>
+                </div>
+                <form action="#" method="post" style="margin: 0 auto;">
+                    <input class="form-control" type="text" name="Name" id="tbox">
+                    <input class="form-control" type="password" name="Password" id="pbox">
+                    <select class="form-control" name="sbox" id="sbox">
+                        <option disabled selected value> -- select an option -- </option>
+                        <option value="Rjk">Rajkot</option>
+                        <option value="jmn">Jamnagar</option>
+                        <option value="ahm">Ahemdabad</option>
+                    </select>
+                    <input type="submit" value="Submit" class="btn btn-success">
+                </form>
+            </div>
+            <div class="row">
+                <div style="margin: 0 auto;" class="col-lg-2">
+                    <input type="text" name="tbx" id="tbx" class="form-control">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    </script>
+
+    <script>
+        $('.pg-ul li').addClass('mb-2');
+        // $('.btn').click(function () {
+        //     var info = $(this).attr('class');
+        //     alert(info);
+        // });
+
+        $(document).ready(function () {
+            $('.btn1').click(function () {
+                var s = $(this).css('background-color');
+                $('#togp').css('color', `${s}`);
+            })
+
+            $('#toggle-para').click(function () {
+                $('#togp').toggle();
+            })
+
+            // $(document).mousemove(function (e) {
+            //     $('#coords').html('x : ' + e.clientX + "y :" + e.clientY);
+            // })
+
+            $(document).ready(function () {
+                $('#corrdsmode').click(function () {
+                    $(document).mousemove(function (e) {
+                        $('#coords').html('x : ' + e.clientX + "y :" + e.clientY);
+                    })
+                })
+                // if ($('#corrdsmode').click) {
+
+                //     // $(document).mousemove(function (e) {
+                //     //     $('#coords').html('x : ' + e.clientX + "y :" + e.clientY);
+                //     // })
+                // }
+            })
+        });
+
+        $('input').focus(function () {
+            $(this).css('background', '#E8E8E8');
+        })
+        $('input').blur(function () {
+            $(this).css('background', 'white');
+        })
+        $('input').keyup(function (e) {
+            console.log(e.target.Value);
+        })
+
+        $('select#sbox').change(function (e) {
+            alert($('#sbox').val());
+        })
+
+        $('#tbx').keyup(function (e) {
+            var code = e.which;
+            if (code == 13) {
+                e.preventDefault();
+                $('#sbox').append('<option>' + e.target.value + '</option>');
+            }
+        })
+
+        var array = $('#sbox option').toArray();
+        for (var i = 0; i < array.length; i++) {
+            if (i == 0) {
+                continue;
+            }
+            console.log(array[i].label);
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
