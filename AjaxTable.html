@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table | Ajax </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-lg-2">
+                <button id="GetData" class="btn btn-dark">Get Data</button>
+            </div>
+            <div class="col-lg-3">
+                <input type="text" id="searchBox" class="form-control" placeholder="Search" onkeyup="search()">
+            </div>
+            <div class="col-lg-3">
+                <div class="alert alert-danger" style="display: none;" id="prompt" role="alert">
+                    No data in table
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-12">
+                <table class="table mytab">
+                    <thead class="thead-dark">
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Email</th>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row mt-4" style="margin: 0 auto;">
+            <div class="text-dark" id="spinner" style="margin: 0 auto;" role="status">
+
+            </div>
+        </div>
+        <div class="row mt-4">
+            <h4 class="text-danger" id="servererr" style="display: none;">Service Temporary Unavailable</h4>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script>
+        function search() {
+            if (arr.length === 0) {
+                $('#prompt').css('display', "");
+            }
+            else {
+                $('.mytab tbody').html("");
+                var tbdata = $('#searchBox').val().toLowerCase();
+                console.log(tbdata);
+                for (i = 0; i < arr.length; i++) {
+                    if (arr[i].name.toLowerCase().includes(tbdata)) {
+                        console.log(arr[i]);
+                        $('.mytab tbody').append("<tr><td>" + arr[i].name + "</td><td>" + arr[i].username + "</td><td>" + arr[i].email + "</td></tr>");
+                    }
+                }
+            }
+        }
+        var arr = [];
+        $('#GetData').click(function () {
+            $('#spinner').addClass('spinner-border');
+            $.ajax({
+                type: 'GET',
+                url: "https://jsonplaceholder.typicode.com/users",
+                headers: {
+                    "Access-Control-Allow-Origin": "*"
+                },
+                success: function (xhr) {
+                    arr = xhr;
+
+                    $('#spinner').removeClass('spinner-border');
+                    $.map(xhr, function (users, i) {
+                        $('.mytab tbody').append("<tr><td>" + users.name + "</td><td>" + users.username + "</td><td>" + users.email + "</td></tr>");
+                    })
+                },
+                error: function () {
+                    $('#spinner').removeClass('spinner-border');
+                    $('#servererr').css("display", "");
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
